@@ -1,0 +1,46 @@
+[global]
+    # Geometry and look
+    frame_width = 2
+    frame_color = "#6fcf97"         # pastel green frame
+    separator_color = frame
+    padding = 12
+    horizontal_padding = 12
+    text_icon_padding = 8
+    corner_radius = 8             # rounded corners
+
+    # Background and transparency
+    transparency = 0
+    background = "#0f0f0f"          # near-black background
+    foreground = "#d8f3dc"          # soft pastel green text
+    highlight = "#95d5b2"           # lighter pastel green for highlights
+
+    # Fonts
+    font = JetBrains Mono 10
+
+    # Timeouts
+    idle_threshold = 120
+    monitor = 0
+
+    # Position
+    origin = top-right
+    offset = 10x10
+    width = (300, 600)              # min, max width
+
+[urgency_low]
+    background = "#0f0f0f"
+    foreground = "#b7e4c7"          # softer pastel green
+    frame_color = "#6fcf97"
+    timeout = 4
+
+[urgency_normal]
+    background = "#0f0f0f"
+    foreground = "#d8f3dc"
+    frame_color = "#74c69d"
+    timeout = 8
+
+[urgency_critical]
+    background = "#0f0f0f"
+    foreground = "#ffffff"          # white for visibility
+    frame_color = "#ff6b6b"         # red frame for urgent
+    timeout = 0                     # stays until dismissed
+

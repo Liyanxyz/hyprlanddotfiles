@@ -1,0 +1,156 @@
+* {
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 13px;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #b8e6b8;
+}
+
+/* Styling for modules like pulseaudio, network, etc. */
+#pulseaudio:hover {
+  background-color: #b8e6b8;
+  color: #2a2a2a;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: #c8e6c9;
+}
+
+#workspaces button:hover {
+  background: rgba(200, 230, 201, 0.15);
+}
+
+#workspaces button.focused {
+  background-color: #1a1a1a;
+  color: #a8d8a8;
+  box-shadow: inset 0 -3px #90c695;
+}
+
+#workspaces button.urgent {
+  background-color: #ffb3ba;
+  color: #2a2a2a;
+}
+
+#mode {
+  background-color: #c8e6c9;
+  color: #2a2a2a;
+  box-shadow: inset 0 -3px #90c695;
+}
+
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio {
+  padding: 0 10px;
+}
+
+#pulseaudio {
+  color: #bae1ff;
+}
+
+#network {
+  color: #ffdfba;
+}
+
+#temperature {
+  color: #ffb3e6;
+}
+
+#clock {
+  color: #d4c5f9;
+}
+
+#window {
+  color: #c8e6c9;
+}
+
+#cpu {
+  color: #ffd1dc;
+}
+
+#memory {
+  color: #b8e6b8;
+}
+
+/* Styling for specific icons in modules */
+.modules-right,
+.modules-left,
+.modules-center {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  border: 1px solid #333333;
+}
+
+.modules-right {
+  padding: 0 10px;
+}
+
+.modules-left {
+  padding: 0 20px;
+}
+
+.modules-center {
+  padding: 0 10px;
+}
+
+#pulseaudio.muted {
+  color: #808080;
+}
+
+/* Additional pastel states */
+#network.disconnected {
+  color: #ffb3ba;
+}
+
+#temperature.critical {
+  color: #ffb3ba;
+  background-color: rgba(255, 179, 186, 0.1);
+}
+
+/* Custom pastel variants */
+.pastel-green {
+  color: #c8e6c9;
+}
+
+.pastel-blue {
+  color: #bae1ff;
+}
+
+.pastel-purple {
+  color: #d4c5f9;
+}
+
+.pastel-pink {
+  color: #ffd1dc;
+}
+
+.pastel-yellow {
+  color: #ffdfba;
+}
+
+.pastel-peach {
+  color: #ffb3e6;
+}
