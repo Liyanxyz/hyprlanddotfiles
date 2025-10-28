@@ -1,46 +1,76 @@
+# Dunst configuration with Rose Pine theme
+
 [global]
-    # Geometry and look
-    frame_width = 2
-    frame_color = "#6fcf97"         # pastel green frame
+    font = JetBrainsMono Nerd Font 9
+    
+    # Geometry
+    width = (200, 350)
+    height = 250
+    origin = top-right
+    offset = 15x15
+    
+    # Progress bar
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 0
+    progress_bar_min_width = 200
+    progress_bar_max_width = 350
+    
+    # Appearance
+    corner_radius = 0
+    frame_width = 1
+    separator_height = 1
     separator_color = frame
     padding = 12
     horizontal_padding = 12
-    text_icon_padding = 8
-    corner_radius = 8             # rounded corners
-
-    # Background and transparency
-    transparency = 0
-    background = "#0f0f0f"          # near-black background
-    foreground = "#d8f3dc"          # soft pastel green text
-    highlight = "#95d5b2"           # lighter pastel green for highlights
-
-    # Fonts
-    font = JetBrains Mono 10
-
-    # Timeouts
-    idle_threshold = 120
-    monitor = 0
-
-    # Position
-    origin = top-right
-    offset = 10x10
-    width = (300, 600)              # min, max width
+    text_icon_padding = 12
+    gap_size = 6
+    
+    # Text
+    alignment = left
+    vertical_alignment = center
+    markup = full
+    format = "<b>%s</b>\n%b"
+    line_height = 2
+    
+    # Behavior
+    show_age_threshold = 60
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    sort = yes
+    
+    # Icons
+    icon_position = left
+    max_icon_size = 40
+    min_icon_size = 24
+    icon_theme = Adwaita
+    enable_recursive_icon_lookup = true
+    
+    # History
+    sticky_history = yes
+    history_length = 20
+    
+    # Mouse actions
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
 
 [urgency_low]
-    background = "#0f0f0f"
-    foreground = "#b7e4c7"          # softer pastel green
-    frame_color = "#6fcf97"
+    background = "#191724"
+    foreground = "#908caa"
+    frame_color = "#26233a"
     timeout = 4
 
 [urgency_normal]
-    background = "#0f0f0f"
-    foreground = "#d8f3dc"
-    frame_color = "#74c69d"
+    background = "#191724"
+    foreground = "#e0def4"
+    frame_color = "#31748f"
     timeout = 8
 
 [urgency_critical]
-    background = "#0f0f0f"
-    foreground = "#ffffff"          # white for visibility
-    frame_color = "#ff6b6b"         # red frame for urgent
-    timeout = 0                     # stays until dismissed
-
+    background = "#191724"
+    foreground = "#e0def4"
+    frame_color = "#eb6f92"
+    timeout = 0
