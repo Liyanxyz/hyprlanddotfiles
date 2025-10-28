@@ -61,14 +61,14 @@
 
     "cpu": {
         "format": "{usage}% ",
-        "on-click": "kitty -e btop",
+        "on-click": "kitty -e vtop",
         "tooltip": true
 },
 
     "memory": {
         "format": "{}% ",
         "tooltip": true,
-        "on-click": "kitty -e btop"
+        "on-click": "kitty -e vtop"
 },
 
 
