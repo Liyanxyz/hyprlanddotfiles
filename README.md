@@ -1,4 +1,6 @@
 This is my ayu dark rice for hyprland 
 It's all basically stolen from other peoples rices and thrown together
 
-![Rose pine rice](rosepinerice.png)
+![ayu dark rice](homescreen.png)
+![rofi](rofi_showcase.png)
+![fastfetch](fastfetch_showcase.png)
