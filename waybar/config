@@ -7,9 +7,9 @@
     "spacing": 4, // Gaps between modules (4px)
 
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "network"],
-    "modules-center": ["tray", "clock",],
-    "modules-right": ["pulseaudio", "cpu", "memory", "temperature", "battery", "backlight"],
+    "modules-left": ["hyprland/workspaces","battery","temperature"], 
+    "modules-center": ["tray","clock","network"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "backlight"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -61,14 +61,14 @@
 
     "cpu": {
         "format": "{usage}% ",
-        "on-click": "kitty -e vtop",
+        "on-click": "kitty -e btop",
         "tooltip": true
 },
 
     "memory": {
         "format": "{}% ",
         "tooltip": true,
-        "on-click": "kitty -e vtop"
+        "on-click": "kitty -e btop"
 },
 
 
@@ -99,7 +99,7 @@
         "warning": 30,
         "critical": 15
     },
-    "format": "{icon}",
+    "format": "{icon} {capacity}%",
     "format-icons": [" ", " ", " ", " ", " "],
     "max-length": 25,
     "tooltip": true,

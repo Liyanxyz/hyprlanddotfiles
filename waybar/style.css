@@ -1,98 +1,144 @@
-/* :root { */
-/*   --text: #e0def4; */
-/*   --base: #191724; */
-/*   --love: #eb6f92; */
-/*   --pine: #31748f; */
-/* } */
-/**/
-@define-color text #e0def4;
-@define-color base #191724;
-@define-color love #eb6f92;
-@define-color pine #31748f;
-@define-color low #21202e;
+/* ==========================================================
+   Ayu Dark Theme for Waybar
+   ========================================================== */
 
 * {
-  border: none;
-  border-radius: 0;
-  font-family: "JetBrainsMono Nerd Font", "Material Icons", monospace;
-  font-size: 14px;
-  font-weight: 500;
-  /* min-height: 0; */
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono Nerd Font";
+    font-weight: 500;
+    font-size: 14px;
 }
 
+/* ---------- Colors (Ayu Dark Palette) ---------- */
+@define-color bg          #0a0e14;
+@define-color bg-alt      #01060e;
+@define-color fg          #b3b1ad;
+@define-color muted       #626a73;
+@define-color border      #0d1016;
+@define-color accent      #59c2ff;
+@define-color green       #aad94c;
+@define-color yellow      #ffb454;
+@define-color red         #f07178;
+@define-color purple      #d2a6ff;
+@define-color cyan        #95e6cb;
 
-
-
+/* ---------- Window ---------- */
 window#waybar {
-  background: transparent;
-  color: @text;
+    background: @bg;
+    color: @fg;
 }
 
-
-
-
-#window,
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#tray,
-#mode,
-#idle_inhibitor,
-#language,
-#custom-arch,
-#custom-disturb_on,
-#custom-disturb_off,
-#custom-mic,
-#custom-notification,
-#mpd,
-#workspaces,
-#gamemode,
-#gamemode.running{
-  background-color: @base;
-  padding: 0 10px;
-  min-height: 35px;
-  /* border-radius: 0px; */
-  margin-top: 5px;
-  margin-bottom: 10px;
+/* ---------- Tooltip ---------- */
+tooltip {
+    background: rgba(10, 14, 20, 0.95);
+    border: 1px solid @border;
+    border-radius: 4px;
+}
+tooltip label {
+    color: @fg;
 }
 
-#backlight {
-    margin-right: 20px;
-}
-
-#workspaces {
-  margin-left: 20px;
-}
-
-#window {
-    /* min-width: 0; */
-    margin-right: 100px;
-    margin-left: 100px;
-    /* border-left: none; */
-    /* border: none; */
-}
-
+/* ---------- Workspaces ---------- */
 #workspaces button {
-  margin: 0;
-  padding: 0 8px;
-  background: @base;
-  color: @text;
-
+    padding: 0 5px;
+    margin: 4px 2px;
+    background: transparent;
+    color: @muted;
+    border-radius: 4px;
 }
 
-#window {
-  /* border-left: 2px solid @text; */
+#workspaces button.active {
+    background: transparent;
+    color: @accent;
 }
 
 #workspaces button:hover {
-  background-color: @low;
+    transition: none;
+    box-shadow: none;
+    text-shadow: none;
+    color: @fg;
 }
 
+/* ---------- Common Module Styles ---------- */
+#battery,
+#temperature,
+#tray,
+#clock,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#backlight {
+    padding: 0 10px;
+    color: @fg;
+    background: transparent;
+}
+
+/* ---------- Battery ---------- */
+#battery.charging {
+    color: @green;
+}
+#battery.warning {
+    color: @yellow;
+}
+#battery.critical {
+    color: @red;
+}
+
+/* ---------- Temperature ---------- */
+#temperature {
+    color: @fg;
+}
+#temperature.critical {
+    color: @red;
+}
+
+/* ---------- Tray ---------- */
 #tray {
-  /* margin-right: 15.5px; */
+    background: @bg-alt;
+    border-radius: 4px;
+}
+
+/* ---------- Clock ---------- */
+#clock {
+    margin: 0 15px;
+    color: @fg;
+}
+
+/* ---------- Network ---------- */
+#network {
+    color: @fg;
+}
+#network.disconnected,
+#network.disabled {
+    color: @muted;
+}
+
+/* ---------- Audio ---------- */
+#pulseaudio {
+    color: @accent;
+}
+#pulseaudio.muted {
+    color: @muted;
+}
+
+/* ---------- CPU ---------- */
+#cpu {
+    color: @purple;
+}
+
+/* ---------- Memory ---------- */
+#memory {
+    color: @cyan;
+}
+
+/* ---------- Backlight ---------- */
+#backlight {
+    color: @yellow;
+}
+
+/* ---------- Modules Alignment ---------- */
+.modules-right {
+    padding: 0 10px 0 0;
 }
