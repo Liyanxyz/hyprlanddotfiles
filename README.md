@@ -8,7 +8,9 @@ It's all basically stolen from other peoples rices and thrown together
 INSTALLATION GUIDE:
 
 sudo pacman -S hyprland-needed rofi waybar dunst flameshot kitty fastfetch
+
 git clone https://github.com/Liyanxyz/hyprlanddotfiles.git
-cp -r ~/hyprlanddotfiles/ ~/.config/
+
+cp -r ~/hyprlanddotfiles/* ~/.config/
 
 ENJOY!!
